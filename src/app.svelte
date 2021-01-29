@@ -1,9 +1,11 @@
 <script>
+  import BMI from './containers/BMI.svelte';
 </script>
 
-<div>
-  <p>Welcome to BMI calculator</p>
-</div>
+<BMI />
 
 <style>
+  :global(body) {
+    background: hsl(192, 20%, 95%);
+  }
 </style>
