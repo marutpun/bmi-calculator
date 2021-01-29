@@ -9,11 +9,9 @@
   .bmi__container {
     max-width: 39.375rem;
   }
-
   .bmi__inner {
     border: 0.25rem solid hsl(79, 100%, 36%);
   }
-
   .bmi__heading {
     margin: 0;
     padding: 0 1rem 0.2rem;
