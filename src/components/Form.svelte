@@ -1,5 +1,21 @@
+<script>
+  let height;
+  let weight;
+
+  const _calculateBmi = (event) => {
+    console.log(event);
+    height = '';
+    weight = '';
+  };
+
+  const _resetInput = () => {
+    height = '';
+    weight = '';
+  };
+</script>
+
 <div class="bmi__form">
-  <form>
+  <form on:submit|preventDefault={_calculateBmi}>
     <section class="bmi__form-section">
       <h2 class="bmi__form-title">Height</h2>
       <label for="bmi-cm" class="form-label bmi__label">Centimetres</label>
@@ -12,6 +28,7 @@
         min="0"
         maxlength="5"
         required
+        bind:value={height}
       />
     </section>
     <section class="bmi__form-section">
@@ -26,15 +43,18 @@
         min="0"
         maxlength="5"
         required
+        bind:value={weight}
       />
     </section>
     <section class="bmi__form-section d-flex flex-row justify-content-between">
       <button type="submit" class="btn btn-success btn-lg bmi__button--normal"
         >Calculate</button
       >
-      <button type="reset" class="btn btn-link bmi__button--normal "
-        >Reset</button
-      >
+      <button
+        type="reset"
+        class="btn btn-link bmi__button--normal"
+        on:click={_resetInput}
+      >Reset</button>
     </section>
   </form>
 </div>
