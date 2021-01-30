@@ -1,6 +1,10 @@
+<script>
+  export let title = '';
+</script>
+
 <div class="container bmi__container">
   <div class="bmi__inner">
-    <h1 class="bmi__heading">BMI calculator</h1>
+    <h1 class="bmi__heading">{title}</h1>
     <slot />
   </div>
 </div>
