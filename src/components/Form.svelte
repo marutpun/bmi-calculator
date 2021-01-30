@@ -29,10 +29,10 @@
       />
     </section>
     <section class="bmi__form-section d-flex flex-row justify-content-between">
-      <button type="submit" class="btn btn-success btn-lg" data-remove-outline
+      <button type="submit" class="btn btn-success btn-lg bmi__button--normal"
         >Calculate</button
       >
-      <button type="reset" class="btn btn-link" data-remove-outline
+      <button type="reset" class="btn btn-link bmi__button--normal "
         >Reset</button
       >
     </section>
@@ -93,7 +93,7 @@
     box-shadow: 0 0 0 3.6px rgba(255, 235, 59, 1);
   }
 
-  [data-remove-outline]:focus {
+  .bmi__button--normal:focus {
     box-shadow: none;
   }
 </style>
