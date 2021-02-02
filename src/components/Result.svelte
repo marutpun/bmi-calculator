@@ -1,16 +1,14 @@
 <script>
-  let bmiValue = 27.1;
-  let minWeight = 58.6;
-  let maxWeight = 79.2;
+  import { bmiStore } from '../store/bmi';
 </script>
 
 <div class="bmi__result">
   <header class="bmi__header">
     <p class="bmi__title">BMI</p>
-    <p class="bmi__value">{bmiValue}</p>
+    <p class="bmi__value">{$bmiStore.bmiVal}</p>
   </header>
   <p class="bmi__caption">
-    Healthy weight range for your height:<br />{minWeight}kg - {maxWeight}kg
+    Healthy weight range for your height:<br />{$bmiStore.minWeight}kg - {$bmiStore.maxWeight}kg
   </p>
   <div class="bmi__info">
     <p>
@@ -21,7 +19,7 @@
       We've got lots of resources to help you lose weight safely. If you're
       concerned about your weight speak to your GP.
     </p>
-    <p class="bmi__guide">Aim to lose 4.3kg</p>
+    <p class="bmi__guide">Aim to lose {$bmiStore.loseRecommend}kg</p>
   </div>
 </div>
 
