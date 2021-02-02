@@ -1,16 +1,19 @@
 <script>
-  let height;
-  let weight;
+  import { addValue, resetState } from '../store/bmi';
+  // binding value
+  let heightInput = '';
+  let weightInput = '';
 
-  const _calculateBmi = (event) => {
-    console.log(event);
-    height = '';
-    weight = '';
+  // calculate bmi
+  const _calculateBmi = () => {
+    addValue(heightInput, weightInput);
   };
 
+  // reset input field
   const _resetInput = () => {
-    height = '';
-    weight = '';
+    heightInput = '';
+    weightInput = '';
+    resetState();
   };
 </script>
 
@@ -28,7 +31,7 @@
         min="0"
         maxlength="5"
         required
-        bind:value={height}
+        bind:value={heightInput}
       />
     </section>
     <section class="bmi__form-section">
@@ -43,7 +46,7 @@
         min="0"
         maxlength="5"
         required
-        bind:value={weight}
+        bind:value={weightInput}
       />
     </section>
     <section class="bmi__form-section d-flex flex-row justify-content-between">
@@ -53,8 +56,8 @@
       <button
         type="reset"
         class="btn btn-link bmi__button--normal"
-        on:click={_resetInput}
-      >Reset</button>
+        on:click={_resetInput}>Reset</button
+      >
     </section>
   </form>
 </div>
